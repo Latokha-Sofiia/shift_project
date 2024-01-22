@@ -1,25 +1,24 @@
 import {Component, Input, ViewChild} from '@angular/core';
 import {IGameData} from "../../services/data-games.service";
 import {dataGamesService} from "../../services/data-games.service";
-import {style} from "@angular/animations";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent {
   @ViewChild('inputElement') inputElement!: any;
   @Input('dataGames') dataGames!: IGameData[];
   foundElements = ''
+  constructor(
+    private dataGamesService: dataGamesService,
+  ) {}
 
   focusToInput() {
     this.inputElement.nativeElement.focus()
   }
-
-  constructor(
-    private dataGamesService: dataGamesService,
-  ) {}
   onClick() {
     let textFromSearch = this.inputElement.nativeElement.value;
     let dataGames = this.dataGamesService.dataGames;
