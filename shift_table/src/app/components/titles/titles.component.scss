@@ -1,0 +1,38 @@
+.title-card-wrapper {
+  width: 17%;
+  max-width: 320px;
+  min-width: 84.2px;
+  height: 48px;
+
+  border-radius: 10px;
+  background: #ffffff;
+
+  margin-bottom: 25px;
+  margin-right: 5px;
+
+  user-select: none;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 10px 5px 5px red;
+  }
+
+  .line {
+    color: #17142f;
+
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    &:hover {
+    color: #6f4ff2;
+    font-size: 15px;
+    }
+  }
+}
+
