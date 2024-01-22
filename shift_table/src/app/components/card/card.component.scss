@@ -1,5 +1,4 @@
 .all-card {
-  //min-width: 100px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -24,10 +23,6 @@
     box-shadow:  3px 3px #5037af, 1px 1px .4em red;
   }
 
-.line:hover {
-  font-size: 15px;
-  font-weight: 600;
-}
   .line {
     color: #fff;
 
@@ -40,16 +35,12 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-
-
-
-
-
-
-
   }
 }
 
-
+.line:hover {
+  font-size: 15px;
+  font-weight: 600;
+}
 
 

@@ -16,7 +16,6 @@ export interface IGameData {
 })
 
 export class TableComponent {
-
   @Input() dataGame!: IGameData;
   titles = this.dataGamesService.titles
   dataGames = this.dataGamesService.dataGames
@@ -37,7 +36,7 @@ export class TableComponent {
     this.width_now = event.target.innerWidth;
 
     //Меняем на мобилку
-    if ((this.width_now < 500) && (this.width_last >= 500)) { //421
+    if ((this.width_now < 500) && (this.width_last >= 500)) {
       this.dataGamesService.changeOnMobile()
       this.apdateTable()
     }
