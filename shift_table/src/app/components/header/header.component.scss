@@ -45,9 +45,24 @@ img {
   height: 34px;
   margin-bottom: 15px;
 
+  overflow: hidden;
+  text-shadow:
+    0 0 tomato,
+    0 0 yellowgreen;
+  transition: all 1s;
+
   &:hover {
-    background-color: #5037af;
-    font-size: 14px;
+    font-size: 15px;
+    background: linear-gradient(21deg, #dd03e4, #5611ec);
+    text-shadow:
+      -400px 0 tomato,
+      400px 0 yellowgreen,
+      0 0 skyblue;
+    border-width: 3px;
+    //border-style: outset;
+    border-color: #dd03e4;
+    cursor: cell;
+
   }
 }
 
@@ -71,3 +86,24 @@ img {
   background-color: blue;
 }
 
+.box-border {
+  height: 47px;
+  max-width: 1600px;
+  min-width: 421px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 1px;
+
+    &:hover {
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      background-size: 400%;
+      animation: glowing 20s linear infinite;
+      transition: opacity .3s ease-in-out;
+      backdrop-filter: blur(5px);
+      @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+      }
+    }
+}
