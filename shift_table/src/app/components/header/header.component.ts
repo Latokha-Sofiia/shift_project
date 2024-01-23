@@ -27,6 +27,14 @@ export class HeaderComponent {
 
     if (textFromSearch === '') {
       this.foundElements = 'Введите текст в поле ввода'
+      for (let line = 0; line < dataGames.length; line++) {
+        body.childNodes[line].childNodes[0].childNodes[0].childNodes[0].style.cssText += 'color: #fff'
+        body.childNodes[line].childNodes[0].childNodes[1].childNodes[0].style.cssText += 'color: #fff'
+        body.childNodes[line].childNodes[0].childNodes[2].childNodes[0].style.cssText += 'color: #fff'
+        body.childNodes[line].childNodes[0].childNodes[3].childNodes[0].style.cssText += 'color: #fff'
+        body.childNodes[line].childNodes[0].childNodes[4].childNodes[0].style.cssText += 'color: #fff'
+
+      }
     } else {
       for (let line = 0; line < dataGames.length; line++) {
 
